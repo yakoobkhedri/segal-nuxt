@@ -64,7 +64,7 @@
   </div>
     <!-- banner -->
     <Banner />
-
+    
     <!-- category -->
     <section class="mt-lg-5 pt-lg-3 overflow-x-hidden">
       <div class="container px-0 px-md-3">
@@ -959,6 +959,7 @@
 
 <script setup>
 const { data:categories } = await useAsyncData('item', () => $fetch('https://dummyjson.com/products/category-list'));
+
 </script>
 
 <style>
