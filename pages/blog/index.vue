@@ -122,10 +122,10 @@
     </div>
     <!-- blog grid -->
     <div class="row mx-0 gx-4 gy-5 mt-lg-5 mt-3 pb-5">
-      <div v-for="(n,index) in 6" :key="index" class="col-xl-4 col-lg-6">
+      <div v-for="(post,index) in posts.posts" :key="index" class="col-xl-4 col-md-6">
         <div class="bg-white shadow7 rounded-25 p-4 blogCard position-relative">
           <img alt="blog" src="assets/img/blog1.png" class="img-fluid w-100 d-block">
-          <NuxtLink :to="`/blog/${index+1}`" class="font-bold text-black mt-3 d-block">لورم ایپسوم متن ساختگی طراحان گرافیک</NuxtLink>
+          <NuxtLink :to="`/blog/${post.id}`" class="font-bold text-black mt-3 d-block line-clamp-1">{{post.title}}</NuxtLink>
           <div class="d-flex align-items-center gap-3 mt-3">
             <div class="d-flex align-items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -156,9 +156,8 @@
               stroke-dasharray="5 5" />
           </svg>
           <!--  -->
-          <p class="fs-13 text-gray mt-3 lh-24 mb-4">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
-            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است ...
+          <p class="fs-13 text-gray mt-3 lh-24 mb-4 line-clamp-4">
+            {{post.body}}
           </p>
           <NuxtLink :to="`/blog/${index+1}`"
             class="d-flex align-items-center blogLink justify-content-center bg-main3 left-87 z-10 -bottom-19 position-absolute w-61 h-61 rounded-circle">
@@ -245,6 +244,9 @@
 useHead({
   title: "وبلاگ",
 });
+
+const posts = await $fetch('https://dummyjson.com/posts');
+
 </script>
 
 <style>

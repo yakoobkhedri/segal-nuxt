@@ -1713,7 +1713,7 @@
                 <!-- cart number -->
                 <span
                   class="d-block bg-white text-dark w-26 h-11 rounded-5 fs-10 text-center shadow1"
-                  >12</span
+                  >{12}</span
                 >
               </NuxtLink>
             </div>
@@ -1864,7 +1864,7 @@
               <!-- cart number -->
               <span
                 class="d-block bg-white position-absolute text-dark w-36 h-15 rounded-5 fs-12 text-center bottom-8 shadow1"
-                >12</span
+                >{{ carts.carts.length }}</span
               >
             </NuxtLink>
             <p class="mb-0 fs-13 text-gray mt-3 text-start ms-1">سبد خرید</p>
@@ -1894,4 +1894,5 @@ function openMenu() {
 function toggleTabs(tabNumber) {
   openTab.value = tabNumber;
 }
+const carts = await $fetch('https://dummyjson.com/carts');
 </script>
