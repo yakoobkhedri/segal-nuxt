@@ -11,7 +11,9 @@
             <div class="d-flex gap-5">
               <img alt="productImg" src="assets/img/product-img.png" class="img-fluid">
               <div>
-                <p class="font-bold">{{ product.title }}</p>
+                <p class="font-bold">
+                  لامپ ال ای دی هوشمند ۷ وات مدل رنگین کمانی ۱۲۴ 
+                </p>
                 <div class="d-flex align-items-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <g opacity="0.3">
@@ -88,7 +90,7 @@
         </div>
       </div>
       <div class="w-362 checkout">
-        <div class="bg-white p-3 rounded-20 shadow5 mt-5 pt-0">
+        <div class="bg-white p-3 rounded-20 shadow5 mt-5 pt-0 top-70 position-sticky">
           <div class="rounded-20 px-4 py-3 bg-second2 -top-27 d-flex align-items-center gap-4 position-relative">
             <!-- before -->
             <div class="position-absolute bg-second rounded-t-20 end-0 start-0 -top-16 mx-4 h-16"></div>
